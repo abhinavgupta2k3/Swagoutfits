@@ -6,32 +6,40 @@ const Navbar = () => {
   const [visible, setVisible] = useState(false)
 
   return (
-    <div className='flex items-center justify-between py-5 font-medium relative'>
+    <div className='flex items-center justify-between py-5 font-medium relative z-50'>
 
       {/* Logo */}
       <img src={assets.swaglogo} className='w-36' alt='logo' />
 
       {/* Desktop Menu */}
       <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
-        <NavLink to='/' className='flex flex-col items-center gap-1'>
-          <p>HOME</p>
-          <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden group-[.active]:block' />
-        </NavLink>
+        <li>
+          <NavLink to='/' end className='flex flex-col items-center gap-1'>
+            <p>HOME</p>
+            <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden ' />
+          </NavLink>
+        </li>
 
-        <NavLink to='/collection' className='flex flex-col items-center gap-1'>
-          <p>COLLECTION</p>
-          <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-        </NavLink>
+        <li>
+          <NavLink to='/collection' className='flex flex-col items-center gap-1'>
+            <p>COLLECTION</p>
+            <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
+          </NavLink>
+        </li>
 
-        <NavLink to='/about' className='flex flex-col items-center gap-1'>
-          <p>ABOUT</p>
-          <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-        </NavLink>
+        <li>
+          <NavLink to='/about' className='flex flex-col items-center gap-1'>
+            <p>ABOUT</p>
+            <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
+          </NavLink>
+        </li>
 
-        <NavLink to='/contact' className='flex flex-col items-center gap-1'>
-          <p>CONTACT</p>
-          <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-        </NavLink>
+        <li>
+          <NavLink to='/contact' className='flex flex-col items-center gap-1'>
+            <p>CONTACT</p>
+            <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
+          </NavLink>
+        </li>
       </ul>
 
       {/* Right Side Icons */}
