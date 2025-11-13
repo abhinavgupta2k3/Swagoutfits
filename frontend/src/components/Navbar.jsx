@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className='flex items-center justify-between py-5 font-medium relative z-50'>
 
       {/* Logo */}
-      <img src={assets.swaglogo} className='w-36' alt='logo' />
+      <Link to='/'><img src={assets.swaglogo} className='w-36' alt='logo' /></Link>
 
       {/* Desktop Menu */}
       <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
